@@ -12,8 +12,13 @@ document.body.appendChild(controlPan);
 controlPan.style.backgroundColor = '#ccc';
 
 
-const paintGrid = document.createElement('div');
-paintGrid.classList.add('paint-grid-block');
-document.body.appendChild(paintGrid);
-paintGrid.style.backgroundColor = '#ccc';
+const square = document.createElement('div');
+square.classList.add('paint-grid-block');
+document.body.appendChild(square);
+square.style.backgroundColor = '#ccc';
 
+const footer = document.createElement('div');
+footer.classList.add('footer');
+document.body.appendChild(footer);
+footer.style.backgroundColor = '#ccc';
+footer.innerHTML = `Copyright © ${new Date().getFullYear()} Smorgasen`
