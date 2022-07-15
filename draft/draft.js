@@ -62,4 +62,4 @@ function createGrid(gridNumber) {
     gridPixels.forEach(gridPixel => gridPixel.addEventListener('mouseover', colorGrid));
 }
 
-createGrid(16)
+createGrid(6)
