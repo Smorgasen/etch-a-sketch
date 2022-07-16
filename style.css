@@ -1,3 +1,9 @@
+body {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 2fr 1fr;
+    text-align: center;
+}
 .container {
     display: grid;
     width: 500px;
@@ -8,4 +14,28 @@
 }
 .permahover {
     background: rgb(64, 63, 63);
+}
+.headline {
+    grid-column: 1/3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.footer {
+    grid-column: 1/3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
