@@ -1,11 +1,23 @@
 const container = document.querySelector('.container');
+
 let color = 'black'
+
 const colorButtons = document.querySelectorAll('.color-button');
 colorButtons.forEach(colorButton => colorButton.addEventListener('click', changeColor));
+
 const userColor = document.querySelector('#user-color');
 userColor.addEventListener('input', pickColor, false);
 userColor.addEventListener('change', pickColor, false);
 
+let slider = document.getElementById('range');
+let outputLeft = document.getElementById('grid-size-left');
+let outputRight = document.getElementById('grid-size-right');
+slider.addEventListener('mouseup', gridSize)
+
+
+function randomNumber(number) {
+    return Math.floor(Math.random() * number)
+}
 
 function createGrid(gridNumber) {
     let gridArea = (gridNumber * gridNumber);
@@ -17,6 +29,24 @@ function createGrid(gridNumber) {
     }
     let gridPixels = container.querySelectorAll('div')
     gridPixels.forEach(gridPixel => gridPixel.addEventListener('mouseover', colorGrid))
+}
+
+function gridSize() {
+    let gridPixels = container.querySelectorAll('div');
+    gridPixels.forEach(gridPixel => gridPixel.remove());
+    createGrid(slider.value);
+}
+
+outputLeft.innerHTML = slider.value;
+outputRight.innerHTML = slider.value;
+
+slider.oninput = function() {
+    outputLeft.innerHTML = slider.value;
+    outputRight.innerHTML = slider.value;
+}
+
+function pickColor(event) {
+    color = event.target.value;
 }
 
 function colorGrid() {
@@ -46,31 +76,8 @@ function changeColor(event) {
             break;
     }
 }
-function pickColor(event) {
-    color = event.target.value;
-}
-
-let slider = document.getElementById('range');
-let outputLeft = document.getElementById('grid-size-left');
-let outputRight = document.getElementById('grid-size-right');
-outputLeft.innerHTML = slider.value;
-outputRight.innerHTML = slider.value;
-
-slider.oninput = function() {
-    outputLeft.innerHTML = slider.value;
-    outputRight.innerHTML = slider.value;
-}
-
-function gridSize() {
-    let gridPixels = container.querySelectorAll('div');
-    gridPixels.forEach(gridPixel => gridPixel.remove());
-    createGrid(slider.value);
-}
-
-function randomNumber(number) {
-    return Math.floor(Math.random() * number)
-}
 
 
-slider.addEventListener('mouseup', gridSize)
+
+
 createGrid(slider.value)
