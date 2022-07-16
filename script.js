@@ -14,6 +14,9 @@ let outputLeft = document.getElementById('grid-size-left');
 let outputRight = document.getElementById('grid-size-right');
 slider.addEventListener('mouseup', gridSize)
 
+let clearButton = document.querySelector('.clear')
+clearButton.addEventListener('click', clearAll)
+
 
 function randomNumber(number) {
     return Math.floor(Math.random() * number)
@@ -77,7 +80,10 @@ function changeColor(event) {
     }
 }
 
-
+function clearAll() {
+    let gridItems = container.querySelectorAll('div');
+    gridItems.forEach (gridItem => gridItem.style.backgroundColor = '#ffff')
+}
 
 
 createGrid(slider.value)
