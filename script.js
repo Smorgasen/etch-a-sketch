@@ -17,6 +17,8 @@ slider.addEventListener('mouseup', gridSize)
 let clearButton = document.querySelector('.clear')
 clearButton.addEventListener('click', clearAll)
 
+let copyright = document.querySelector('.copyright')
+copyright.textContent = `Copyright © ${new Date().getFullYear()} Smorgasen`;
 
 function randomNumber(number) {
     return Math.floor(Math.random() * number)
@@ -84,6 +86,5 @@ function clearAll() {
     let gridItems = container.querySelectorAll('div');
     gridItems.forEach (gridItem => gridItem.style.backgroundColor = '#ffff')
 }
-
 
 createGrid(slider.value)
