@@ -2,7 +2,9 @@ const container = document.querySelector('.container');
 let color = 'black'
 const colorButtons = document.querySelectorAll('.color-button');
 colorButtons.forEach(colorButton => colorButton.addEventListener('click', changeColor));
-
+const userColor = document.querySelector('#user-color');
+userColor.addEventListener('input', pickColor, false);
+userColor.addEventListener('change', pickColor, false);
 
 
 function createGrid(gridNumber) {
@@ -24,13 +26,21 @@ function colorGrid() {
     else if (color === 'rainbow') {
         this.style.backgroundColor = 'rgb(' + randomNumber(255) + ',' + randomNumber(255) + ',' + randomNumber(255) + ')';
     }
-
+    else if (color === 'erase') {
+        this.style.backgroundColor = '#ffff'
+    }
+    else {
+        this.style.backgroundColor = color
+    }
 }
 function changeColor(event) {
     switch (event.target.dataset.color) { 
         case 'rainbow':
             color = 'rainbow';
-            break; 
+            break;  
+        case 'erase':
+            color = 'erase';
+            break;
         default:
             color = 'black';
             break;
