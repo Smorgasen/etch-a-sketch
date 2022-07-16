@@ -11,7 +11,13 @@
 </head>
 <body>
     <h1 class="headline">Etch-a-Sketch</h1>
-    <div class="panel">Control Panel</div>
+    <div class="panel">
+        <h2>Control Panel</h2>
+        <div class="slider-container">
+            <input type="range" min="2" max="100" value="16" class="slider" id="range">
+            <p>Size: <span id="grid-size-left"></span>x<span id="grid-size-right"></span></p>
+        </div>
+    </div>
     <div class="container"></div>
     <div class="footer">
         <div class="copyright-links">
