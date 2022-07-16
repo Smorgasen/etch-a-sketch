@@ -6,11 +6,16 @@ body {
     grid-template-rows: 1fr 2fr 1fr;
     text-align: center;
     font-family: 'Roboto', sans-serif;
+    background-image: url(images/wickedbackground.svg);
+    background-size: cover;
 }
 .container {
     display: grid;
     width: 500px;
     height: 500px;
+    background-color: #fff;
+    border: 5px solid #343390;
+    outline: 10px solid #8685d3;
 }
 .container div {
     border: 1px solid rgb(135, 135, 135);
