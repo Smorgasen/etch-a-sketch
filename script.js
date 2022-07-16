@@ -1,4 +1,9 @@
 const container = document.querySelector('.container');
+let color = 'black'
+const colorButtons = document.querySelectorAll('.color-button');
+colorButtons.forEach(colorButton => colorButton.addEventListener('click', changeColor));
+
+
 
 function createGrid(gridNumber) {
     let gridArea = (gridNumber * gridNumber);
@@ -8,12 +13,31 @@ function createGrid(gridNumber) {
         container.style.gridTemplateRows = `repeat(${gridNumber}, 1fr)`;
         container.appendChild(gridItem);
     }
-    container.addEventListener('mouseover', event => {
-        let item = event.target;
-        if (item != container) {
-            item.classList.add('permahover');
-        }
-    })
+    let gridPixels = container.querySelectorAll('div')
+    gridPixels.forEach(gridPixel => gridPixel.addEventListener('mouseover', colorGrid))
+}
+
+function colorGrid() {
+    if (color === 'black') {
+        this.style.backgroundColor = 'rgb(64, 63, 63)';
+    }
+    else if (color === 'rainbow') {
+        this.style.backgroundColor = 'rgb(' + randomNumber(255) + ',' + randomNumber(255) + ',' + randomNumber(255) + ')';
+    }
+
+}
+function changeColor(event) {
+    switch (event.target.dataset.color) { 
+        case 'rainbow':
+            color = 'rainbow';
+            break; 
+        default:
+            color = 'black';
+            break;
+    }
+}
+function pickColor(event) {
+    color = event.target.value;
 }
 
 let slider = document.getElementById('range');
@@ -36,15 +60,7 @@ function gridSize() {
 function randomNumber(number) {
     return Math.floor(Math.random() * number)
 }
-function randomColor() {
-    return 'rgb('+randomNumber(255)+','+randomNumber(255)+','+randomNumber(255)+')'
-}
+
 
 slider.addEventListener('mouseup', gridSize)
 createGrid(slider.value)
-console.log (randomColor())
-
-
-
-
-
