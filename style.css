@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Roboto&display=swap');
+
 body {
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 1fr 2fr 1fr;
     text-align: center;
+    font-family: 'Roboto', sans-serif;
 }
 .container {
     display: grid;
@@ -17,6 +20,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: 'Kalam', cursive;
+    font-size: 72px;
 }
 .container-block {
     display: flex;
