@@ -8,6 +8,12 @@ function createGrid(gridNumber) {
         container.style.gridTemplateRows = `repeat(${gridNumber}, 1fr)`;
         container.appendChild(gridItem)
     }
+    container.addEventListener('mouseover', event => {
+        let item = event.target
+        if (item != container) {
+            item.classList.add('permahover')
+        }
+    })
 }
 
-createGrid(4)
+createGrid(16)

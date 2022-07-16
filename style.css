@@ -4,5 +4,8 @@
     height: 500px;
 }
 .container div {
-    border: 1px solid black;
+    border: 1px solid rgb(135, 135, 135);
+}
+.permahover {
+    background: rgb(64, 63, 63);
 }
