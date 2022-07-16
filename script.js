@@ -33,8 +33,16 @@ function gridSize() {
     createGrid(slider.value);
 }
 
+function randomNumber(number) {
+    return Math.floor(Math.random() * number)
+}
+function randomColor() {
+    return 'rgb('+randomNumber(255)+','+randomNumber(255)+','+randomNumber(255)+')'
+}
+
 slider.addEventListener('mouseup', gridSize)
-createGrid (slider.value)
+createGrid(slider.value)
+console.log (randomColor())
 
 
 
