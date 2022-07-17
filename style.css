@@ -37,17 +37,27 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
-    margin-top: 20px;
+    /* margin-top: 20px; */
 }
 .panel {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 40px;
+    padding: 30px;
     border: 5px solid #343390;
     outline: 10px solid #8685d3;
     gap: 15px;
+}
+.slider-container p {
+    margin: 0;
+    padding: 15px;
+    font-size: 18px;
+}
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
 }
 .color-button,
 .clear {
