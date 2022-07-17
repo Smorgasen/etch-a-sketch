@@ -2,6 +2,9 @@
 
 <strong> Web representation of <em> Etch A Sketch</em> toy .</strong>
 
+Check out the website live <a href="https://smorgasen.github.io/etch-a-sketch/" target="_blank"> here </a>.
+
+
 <img src="images/etch-a-sketch.png" alt="Website layout">
 
 
