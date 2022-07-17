@@ -78,7 +78,7 @@ body {
     cursor: pointer;
     font-weight: bold;
     font-size: 20px;
-    box-shadow: 3px 3px 3px #000;
+    box-shadow: 1px 1px 5px #000;
 }
 
 .color-button:hover,
@@ -90,7 +90,7 @@ body {
 .color-button:focus {
     outline-color: transparent;
     outline-style: groove;
-    box-shadow: 3px 3px 3px #ffbf00;
+    /* box-shadow: 3px 3px 3px #ffbf00; */
     transition: 0.7s;
     background-color: #CA4100;
 }
