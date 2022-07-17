@@ -61,8 +61,27 @@ body {
     font-size: 20px;
     box-shadow: 3px 3px 3px #000;
 }
+.color-button:hover,
+.clear:hover {
+    background-color: #CA4100;
+    transition: 0.7s;
+}
+.color-button:focus {
+    outline-color: transparent;
+    outline-style: groove;
+    box-shadow: 3px 3px 3px #ffbf00;
+    transition: 0.7s;
+    background-color: #CA4100;
+}
+.color-button:active,
+.clear:active {
+    background-color: #ffbf00;
+    outline-color: transparent;
+    outline-style: groove;
+    box-shadow: 3px 3px 3px #ffbf00;
+}
 .color-pick {
-    /* border-radius: 50%; */
+        
 }
 .footer {
     grid-column: 1/3;
