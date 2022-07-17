@@ -33,11 +33,36 @@ body {
     justify-content: center;
     align-items: center;
 }
+.panel-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
 .panel {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 40px;
+    border: 5px solid #343390;
+    outline: 10px solid #8685d3;
+    gap: 15px;
+}
+.color-button,
+.clear {
+    background-color: #343390;
+    color: #fff;
+    border-radius: 10px;
+    padding: 10px 30px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 20px;
+    box-shadow: 3px 3px 3px #000;
+}
+.color-pick {
+    /* border-radius: 50%; */
 }
 .footer {
     grid-column: 1/3;
@@ -45,4 +70,9 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: #fff;
+}
+.footer a {
+    text-decoration: underline;
+    color: #fff;
 }

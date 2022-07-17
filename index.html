@@ -11,17 +11,19 @@
 </head>
 <body>
     <h1 class="headline">Etch-a-Sketch</h1>
-    <div class="panel">
-        <h2>Control Panel</h2>
-        <div class="slider-container">
-            <input type="range" min="2" max="100" value="16" class="slider" id="range">
-            <p>Size: <span id="grid-size-left"></span>x<span id="grid-size-right"></span></p>
+    <div class="panel-block">
+        <div class="panel">
+            <h2>Control Panel</h2>
+            <div class="slider-container">
+                <input type="range" min="2" max="100" value="16" class="slider" id="range">
+                <p>Size: <span id="grid-size-left"></span>x<span id="grid-size-right"></span></p>
+            </div>
+            <button data-color="black" class="color-button">Black</button>
+            <button data-color="rainbow" class="color-button">Rainbow</button>
+            <button data-color="erase" class="color-button">Erase</button>
+            <button class="clear">Clear</button>
+            <button class="color-pick"><input type="color" id="user-color" value="#8685d3"></button>
         </div>
-        <button data-color="black" class="color-button">Black</button>
-        <button data-color="rainbow" class="color-button">Rainbow</button>
-        <button data-color="erase" class="color-button">Erase</button>
-        <button class="color-button"><input type="color" id="user-color" value="#8685d3"></button>
-        <button class="clear">Clear</button>
     </div>
     <div class="container-block">
         <div class="container"></div>
