@@ -83,24 +83,20 @@ body {
 
 .color-button:hover,
 .clear:hover {
-    background-color: #CA4100;
-    transition: 0.7s;
+    background-color: #ff8952;
+    transition: 0.3s;
 }
 
 .color-button:focus {
     outline-color: transparent;
-    outline-style: groove;
-    /* box-shadow: 3px 3px 3px #ffbf00; */
-    transition: 0.7s;
+    /* outline-style: groove; */
+    transition: 0.3s;
     background-color: #CA4100;
 }
 
 .color-button:active,
 .clear:active {
     background-color: #ffbf00;
-    outline-color: transparent;
-    outline-style: groove;
-    box-shadow: 3px 3px 3px #ffbf00;
 }
 
 .footer {
